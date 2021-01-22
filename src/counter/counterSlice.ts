@@ -14,12 +14,13 @@ export const counterSlice = createSlice({
     incCount(state, action: PayloadAction<number>) {
       state.count +=action.payload;
     },
+    incCountDeleyed(state, action: PayloadAction<number>) {},
     decCount(state, action: PayloadAction<number>) {
       state.count -=action.payload;
     }
   }
 });
 
-export const { incCount, decCount } = counterSlice.actions;
+export const { incCount, decCount, incCountDeleyed } = counterSlice.actions;
 
 export const selectCount = (storeState: StoreState) => storeState.counter.count;
